@@ -37,7 +37,7 @@ class TimeSeriesDataset {
             for (size_t i = 1; i <= n; i++) {
                 for (size_t j = 1; j <= m; j++) {
                     double cost = (ts1[i] - ts2[j])*(ts1[i] - ts2[j]);
-                    dtw[i][j] = cost + std::min({ dtw[i][j -1],    // insertion
+                    dtw[i][j] = cost + std::min({ dtw[i][j - 1],    // insertion
                                                   dtw[i][j - 1],    // deletion
                                                   dtw[i - 1][j - 1] // match
                                                 });
